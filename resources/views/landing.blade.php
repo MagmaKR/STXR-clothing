@@ -165,7 +165,7 @@
                             <div class="aspect-w-3 aspect-h-4 overflow-hidden p-4 border-b border-black">
                                 <img src="{{ $product->images->first()->ImageUrl1 ?? '/images/SRXR-TSHIRT-removebg-preview.png' }}" 
                                      alt="{{ $product->name }}" 
-                                     class="w-full h-full object-contain transition-transform duration-500 group-hover:scale-105">
+                                     class="w-full h-[400px] object-contain transform transition-transform duration-500 group-hover:scale-105">
                             </div>
                             <div class="p-6">
                                 <h3 class="text-xl font-bold mb-2 brand-font">{{ $product->name }}</h3>
