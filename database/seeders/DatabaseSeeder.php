@@ -22,6 +22,8 @@ class DatabaseSeeder extends Seeder
         \App\Models\Colors::factory(10)->create();
         \App\Models\Product::factory(100)->create();
         \App\Models\OrderItems::factory(100)->create();
+        \App\Models\ProductImages::factory(100)->create();
+
 
     }
 }
