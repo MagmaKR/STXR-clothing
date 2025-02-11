@@ -1,0 +1,20 @@
+.STXR-logo{
+    
+    width: 120px;
+    height: auto;
+    margin: 0;
+    margin-left: -40px;
+    animation: rotateLeftToRight 5s infinite ease-in-out;
+ }
+ 
+ @keyframes rotateLeftToRight {
+     0%{
+         transform: rotateY(0deg);
+     }
+     50%{
+         transform: rotateY(180deg);
+     }
+     100%{
+         transform: rotateY(360deg);
+     }
+ }
