@@ -14,14 +14,13 @@ return new class extends Migration
         Schema::create('stock_management', function (Blueprint $table) {
             $table->id();
 
-            $table->foreignId('products_id')->references('id')->on('products')->onDelete('cascade');
-            $table->foreignId('colours_id')->references('id')->on('colors')->onDelete('cascade');
+            $table->foreignId('product_id')->references('id')->on('products')->onDelete('cascade');
+            $table->foreignId('color_id')->references('id')->on('colors')->onDelete('cascade');
             $table->foreignId('size_id')->references('id')->on('sizes')->onDelete('cascade');
-            $table->unsignedInteger('quantity_left_of_product');
-
-
-            
-
+            $table->unsignedInteger('quantity');
+            $table->unsignedInteger('low_stock_threshold');
+            $table->string('status', 15);
+            $table->timestamp('last_restock_date');
             $table->timestamps();
         });
     }
