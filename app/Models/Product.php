@@ -16,15 +16,20 @@ class Product extends Model
         return $this->belongsTo(OrderItems::class);
     }
 
-    public function StockManagement() {
-
-        return $this->belongsTo(StockManagement::class);
-    }
+   
 
     public function Review() {
 
         return $this->hasMany(related: Reviews::class);
     }
 
+    public function images()
+    {
+        return $this->hasMany(ProductImages::class);
+    }
 
+    public function StockManagement()
+    {
+        return $this->hasMany(StockManagement::class);
+    }
 }

@@ -152,11 +152,19 @@
 
                 <!-- Products Container -->
                 <div id="productsContainer" class="flex gap-4 md:gap-8 transition-transform duration-500">
-                    @foreach($products as $index => $product)
+                    @php
+                        $latestProducts = App\Models\Product::with(['images', 'StockManagement'])
+                            ->latest('id')  // This orders by id desc
+                            ->take(6)       // Takes the last 6
+                            ->get();
+                    @endphp
+
+                    @foreach($latestProducts as $index => $product)
                     <div class="product-card flex-none w-full sm:w-1/2 md:w-1/3 {{ $index >= 3 ? 'hidden' : '' }}">
                         <div class="bg-gray-100 group overflow-hidden rounded-3xl">
                             <div class="aspect-w-3 aspect-h-4 overflow-hidden p-4 border-b border-black">
-                                <img src="/images/SRXR-TSHIRT-removebg-preview.png" alt="{{ $product->name }}" 
+                                <img src="{{ $product->images->first()->ImageUrl1 ?? '/images/SRXR-TSHIRT-removebg-preview.png' }}" 
+                                     alt="{{ $product->name }}" 
                                      class="w-full h-full object-contain transition-transform duration-500 group-hover:scale-105">
                             </div>
                             <div class="p-6">
@@ -181,7 +189,7 @@
 
             <!-- Dots Navigation -->
             <div class="flex justify-center space-x-2 mt-8">
-                @for($i = 0; $i < ceil(count($products) / 3); $i++)
+                @for($i = 0; $i < ceil(count($latestProducts) / 3); $i++)
                     <button class="slider-dot w-3 h-3 rounded-full bg-gray-300 {{ $i === 0 ? 'bg-black' : '' }}" data-index="{{ $i }}"></button>
                 @endfor
             </div>
