@@ -17,7 +17,11 @@ class ProductImagesFactory extends Factory
     public function definition(): array
     {
         return [
-            //
+            'product_id' => \App\Models\Product::inRandomOrder()->first()->id,
+            'ImageUrl1' => fake()->url(),
+            'ImageUrl2' => fake()->url(),
+
+
         ];
     }
 }
