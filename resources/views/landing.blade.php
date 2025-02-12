@@ -7,6 +7,8 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.7.0/vanilla-tilt.min.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800;900&display=swap" rel="stylesheet">
+    @viteReactRefresh
+    @vite(['resources/js/app.tsx'])
   
     <style>
         .hero-height {
@@ -123,13 +125,7 @@
         
         <!-- 3D Text Container -->
         <div class="relative max-w-9xl mx-auto px-4 h-full flex flex-col items-center justify-center">
-            <div id="moving-text" class="text-white text-center logo-3d">
-                <h1 class="text-[200px] font-black mb-6 brand-font leading-none tracking-tight text-white">STXR</h1>
-                <p class="text-4xl mb-10 font-bold text-gray-200">STYLE THAT <span class="text-slate-400"> SPEAKS </span> VOLUME </p>
-                <a href="#" class="inline-block border border-white text-white px-8 py-4 font-bold text-lg hover:bg-white hover:text-black transition duration-300">
-                    SHOP NOW →
-                </a>
-            </div>
+            <div id="hero-text-root"></div>
         </div>
     </div>
 
