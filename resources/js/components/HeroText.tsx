@@ -2,6 +2,17 @@ import React from 'react';
 import { motion } from 'framer-motion';
 
 export default function HeroText() {
+  const scrollToLatestDrops = (e: React.MouseEvent) => {
+    e.preventDefault();
+    const latestDrops = document.getElementById('latest-drops');
+    if (latestDrops) {
+      latestDrops.scrollIntoView({
+        behavior: 'smooth',
+        block: 'start',
+      });
+    }
+  };
+
   return (
     <div id="moving-text" className="text-white text-center logo-3d">
       <motion.h1 
@@ -24,11 +35,12 @@ export default function HeroText() {
         initial={{ y: 100, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
         transition={{ duration: 0.8, delay: 0.6 }}
-        href="#" 
+        href="#latest-drops"
+        onClick={scrollToLatestDrops}
         className="inline-block border border-white text-white px-8 py-4 font-bold text-lg hover:bg-white hover:text-black transition duration-300"
       >
         SHOP NOW →
       </motion.a>
     </div>
   );
-} 
+}
