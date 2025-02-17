@@ -18,6 +18,7 @@ return new class extends Migration
             $table->decimal('price');
             $table->decimal('delivery_fee');
             $table->dateTime('times')->useCurrent();
+            $table->string('collection')->nullable();
 
 
             $table->timestamps();

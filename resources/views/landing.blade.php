@@ -220,7 +220,7 @@
                 <!-- Brand Section -->
                 <div>
                     <h3 class="text-2xl font-black mb-6 brand-font">STXR</h3>
-                    <p class="text-gray-400 mb-4">Premium streetwear for those who dare to stand out.</p>
+                    <p class="text-gray-400 mb-4">Style that speaks volume. For the people by the people</p>
                     <div class="flex space-x-4">
                         <a href="#" class="text-gray-400 hover:text-white">
                             <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
@@ -271,17 +271,7 @@
                 </div>
 
                 <!-- Newsletter Section -->
-                <div>
-                    <h3 class="text-lg font-bold mb-6">Stay Updated</h3>
-                    <p class="text-gray-400 mb-4">Subscribe to our newsletter for exclusive offers and updates.</p>
-                    <form class="space-y-4">
-                        <input type="email" placeholder="Enter your email" class="w-full px-4 py-2 bg-gray-800 border border-gray-700 rounded-lg focus:outline-none focus:border-white text-white">
-                        <button type="submit" class="w-full px-4 py-2 bg-white text-black font-bold rounded-lg hover:bg-gray-200 transition">
-                            Subscribe
-                        </button>
-                    </form>
-                </div>
-            </div>
+                
 
             <!-- Copyright Section -->
             <div class="border-t border-gray-800 mt-12 pt-8 text-center">
